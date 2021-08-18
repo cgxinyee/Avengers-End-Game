@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avengers: End Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header>
+    &#160; <a href="#" class="brand">Synopsis</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="index.html">Home</a>
+        <a href="synopsis.html">Synopsis</a>
+        <a href="about.html">Movie Characters</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </header>
+  <style>
+      header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  transition: 0.5s ease;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+  </style>
+
+<body>
+    <div class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="img/l.png" alt="l">
+        </div>
+        <div class="slide slide-1">
+             <div class="caption">
+                 <h3>Avengers: End Game</h3>
+                 <p> Avengers: Endgame picks up shortly after Avengers: Infinity War. After Captain Marvel rescues Tony Stark and Nebula from deep space, the Avengers assemble and discover Thanos on a quiet planet, where he is living out a life of peace.
+
+                    When the Avengers confront Thanos and attempt to take back the Infinity Stones, the Mad Titan reveals that he destroy the stones for good. Thor, angered by Thanos' actions, then decapitates Thanos.
+                    
+                    Skip five years ahead, and the Earth isn't prospering like Thanos predicted; it's in shambles. But hope soon arrives when Scott Lang escapes from the quantum realm and explains to the Avengers that time travel is possible.
+                    
+                    With this newfound knowledge, the come up with a plan to travel back in time to retrieve the Infinity Stones and reverse Thanos' snap. Stark and Bruce Banner, who is know "Smart Hulk," manage to build a time machine, and the Avengers use it to go back to key moments throughout the MCU.</p>
+             </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="caption">
+                <h3>Avengers: End Game</h3>
+                <p>The Avengers are ultimately successful in collecting the different Infinity Stones, but their meddling in the past leads to the death of Natasha Romanoff, while Thanos from the past learns of their plans.
+
+                    When the Avengers return to the present with the six Infinity Stones, they're place into a new gauntlet created by Stark. Hulk wields the gauntlet and snaps his fingers, which ultimately resurrects those who perished in Avengers: Infinity War, including Spider-Man, Black Panther, and many others.
+                    
+                    After a huge battle at Avengers HQ, Stark uses the stones again, this time to disintegrate Thanos and his army. The power of the Infinity Stones proves to be too much for Tony and he dies from his injuries.
+                    
+                    In the end, Thor joins the Guardians of the Galaxy, leaving Valkyrie in charge of New Asgard. Meanwhile, Steve Rogers travels back in time to return the Infinity Stones to their original places in time, and opts to remain in the past and live happily ever after with Peggy Carter.
+                    
+                    An elderly Rogers then shows up in the present and hands his shield to Sam Wilson, making him the new Captain America.</p>
+            </div>
+       </div>
+       <div class="slide slide-3">
+            <div class="caption">
+                <h3>Bahar Dar</h3>
+                <p>The Hulk successfully uses the Stones to bring back half the world’s population, only for a past version of Nebula (whom Thanos sent into the future after her split conscience reveals the plot against him, brings the Mad Titan into the present. The stage is set for the battle to decide the fate of the universe.
+                    Iron Man, Thor, and Captain America (who is able to wield Thor’s hammer, Mjolnir, as foreshadowed in Avengers: Age of Ultron) are unable to subdue Thanos, who says he will enjoy stripping the universe to its studs and brings forth his army of dark minions.
+
+Right on schedule, Dr. Strange reappears with everyone from Black Panther and the Wakanda Army to Wong, who peaced out to guard the New York Sanctum as soon as Thanos arrived in Infinity War. 
+                </p>
+            </div>
+       </div>
+       <div class="arrow r" onclick="next()">
+            <img src="img/r.png" alt="r">
+        </div>
+    </div>
+
+    <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls(){
+            for(let i = 0; i < slide.length; i++){
+                  slide[i].style.display = 'none';
+            }
+        }
+
+        function next(){
+            cls();
+            if(current === slide.length-1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function prev(){
+            cls();
+            if(current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start(){
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
+    </script>
+
+    <style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container {
+    position: relative;
+    background: #aad5f6;
+}
+.slide-1 {
+    background: url('../img/Av1.jpg');
+}
+.slide-2 {
+    background: url('../img/Av2.jpg');
+}
+.slide-3 {
+    background: url('../img/3.jpg');
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.caption {
+    background: rgba(0, 0, 0, 0.03);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 0px;
+}
+.caption h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    padding: 18px;
+}
+.caption p {
+    max-width: 600px;
+    width: 90%;
+    margin: 0px auto;
+    color: #ccc;
+    text-align: justify;
+  text-justify: inter-word;
+    font-size: 18px;
+    line-height: 1.5em;
+    text
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    transform: background 500ms;
+}
+.arrow img {
+    width: 50px;
+}
+.arrow:hover {
+    background: rgba(0, 0, 0, .4);
+}
+.l {
+    left: 0;
+}
+.r {
+    right: 0;
+}
+    </style>
+</body>
+</html>
