@@ -223,7 +223,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red;
+    background: rgba(1, 1, 1, 0.5);
   }
 
   header .navigation .navigation-items a{
@@ -275,3 +275,4 @@ section{
     line-height: 60px;
   }
 }
+
