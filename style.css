@@ -12,16 +12,16 @@ header{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 200px;
+  padding: 10px 0px;
   transition: 0.5s ease;
 }
 
 header .brand{
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
@@ -34,7 +34,7 @@ header .navigation{
 
 header .navigation .navigation-items a{
   position: relative;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
@@ -45,7 +45,7 @@ header .navigation .navigation-items a{
 header .navigation .navigation-items a:before{
   content: '';
   position: absolute;
-  background: #fff;
+  background: rgb(255, 255, 255);
   width: 0;
   height: 3px;
   bottom: 0;
@@ -197,7 +197,7 @@ section{
   transition-property: clip-path;
 }
 
-@media (max-width: 1040px){
+@media (max-width: 100%){
   header{
     padding: 12px 20px;
   }
@@ -269,7 +269,7 @@ section{
   }
 }
 
-@media (max-width: 560px){
+@media (max-width: 100%){
   .home .content h1{
     font-size: 3em;
     line-height: 60px;
