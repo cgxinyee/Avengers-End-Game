@@ -11,19 +11,29 @@
   </head>
   <body>
 
-    <header>
-        &#160;<a href="#" class="brand">More Info</a>
-        <div class="menu-btn"></div>
-        <div class="navigation">
-          <div class="navigation-items">
-            <a href="index.html">Home</a>
-            <a href="synopsis.html">Synopsis</a>
-            <a href="about.html">Movie Characters</a>
-            <a href="contact-us.html">Contact Us</a>
-            <a href="author.html">Author</a>
-          </div>
-        </div>
-      </header>
+    <head>
+      <meta charset="utf-8">
+      <title>Responsive Navbar | CodingNepal</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
+    <body>
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><a href="index.html">Home</a></label>
+        <ul>
+          <li><a href="synopsis.html">Synopsis</a></li>
+		      <li><a href="about.html">Characters</a></li>
+		      <li><a href="more-info.html">More</a></li>
+		      <li><a href="contact-us.html">Contact</a></li>
+		      <li><a href="author.html">Author</a></li>
+        </ul>
+      </nav>
+      <section></section>
     
       <body style="background-color:black"></body>
     <!-- design -->
@@ -167,75 +177,103 @@
     
     <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-:root{
-    --Playfair: 'Playfair Display', serif;
-    --Quicksand: 'Quicksand', sans-serif;
-    --Roboto: 'Roboto', sans-serif;
-    --dark: #ffffff;
-    --exDark: #ffffff;
-}
-
-header{
-  z-index: 999;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px;
-  transition: 0.5s ease;
-}
-
-header .brand{
-  color: rgb(255, 255, 255);
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
+*{
+  padding: 0;
+  margin: 0;
   text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-header .navigation{
-  position: relative;
-}
+a{color:white;}
 
-header .navigation .navigation-items a{
-  position: relative;
-  color: rgb(255, 255, 255);
-  font-size: 1em;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 30px;
-  transition: 0.3s ease;
+body{
+  font-family: montserrat;
 }
-
-header .navigation .navigation-items a:before{
-  content: '';
-  position: absolute;
-  background: rgb(255, 255, 255);
-  width: 0;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:hover:before{
+nav{
+  
+  height: 80px;
   width: 100%;
 }
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: transparent;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: white;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: var(--Quicksand);
-}
-body{
-    line-height: 1.4;
-    color: var(--dark);
-}
 img{
     width: 100%;
     display: block;
@@ -304,12 +342,14 @@ table td {
   width: 1500px;
   height: 300px;
   text-align: center;
+  color: white;
 }
 
 table th{
     height: 50px;
     width: 1000px;
     text-align: center;
+    color: white;
 }
 
 table.center {
@@ -325,14 +365,17 @@ table.center {
 .title{
     text-align: center;
     padding: 1rem 0;
+    color: white;
 }
 .title h2{
     font-family: var(--Playfair);
     font-size: 2.4rem;
+    color: white;
 }
 .title p{
     text-transform: uppercase;
     padding: 0.6rem 0;
+    color: white;
 }
 .design-content{
     margin: 2rem 0;
@@ -407,6 +450,7 @@ table.center {
 .blog-content{
     margin: 2rem 0;
     max-width:100%;
+  
 }
 .blog-img{
     position: relative;
@@ -425,6 +469,7 @@ table.center {
 .blog-text{
     margin: 2.2rem 0;
     padding: 0 1rem;
+    color: white;
 }
 .blog-text span{
     font-weight: 300;

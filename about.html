@@ -1,28 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avengers: End Game</title>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
 <!--Jquery-->
 <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
 <script type="text/javascript" src="js/lightslider.js"></script>
 </head>
 
-  <header>
-	&#160;<a href="index.html" class="brand">Home</a>
+<header>
+	<a href="index.html" class="brand">Home</a>
 	<div class="menu-btn"></div>
 	<div class="navigation">
 	  <div class="navigation-items">
-		<a href="synopsis.html">Synopsis</a>
-		  <a href="about.html">Movie Characters</a>
-		  <a href="more-info.html">More Info</a>
-		  <a href="contact-us.html">Contact Us</a>
+		  <a href="synopsis.html">Synopsis</a>
+		  <a href="about.html">Characters</a>
+		  <a href="more-info.html">More</a>
+		  <a href="contact-us.html">Contact</a>
 		  <a href="author.html">Author</a>
-	  </div>
 	  </div>
 	</div>
   </header>
@@ -188,12 +187,18 @@
 	</div>
 	
 	
-<script src="js/script.js" type="text/javascript"></script>
-</body>
-</html>
-
+<script src="js/script.js" type="text/javascript">
+</script>
 		
 	<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
 header{
   z-index: 999;
@@ -245,7 +250,89 @@ header .navigation .navigation-items a:hover:before{
   width: 100%;
 }
 
+section{
+  padding: 100px 200px;
+}
 
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section{
+    padding: 100px 20px;
+  }
+
+  .home .media-icons{
+    right: 15px;
+  }
+
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a{
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items a:before{
+    background: #222;
+    height: 5px;
+  }
+
+  header .navigation.active .navigation-items{
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn{
+    background: url(img/menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active{
+    z-index: 999;
+    background: url(close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+}
+
+@media (max-width: 560px){
+  .home .content h1{
+    font-size: 3em;
+    line-height: 60px;
+  }
+}
 
 body{
 	margin:0px;
@@ -316,5 +403,8 @@ a{
 }
 
 	</style>
+
+	</body>
+	</html>
 
 	
