@@ -9,15 +9,15 @@
 </head>
 
 <header>
-    &#160; <a href="#" class="brand">Synopsis</a>
+    <a href="index.html" class="brand">Home</a>
     <div class="menu-btn"></div>
     <div class="navigation">
       <div class="navigation-items">
-        <a href="index.html">Home</a>
-        <a href="about.html">Movie Characters</a>
-        <a href="more-info.html">More Info</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="author.html">Author</a>
+          <a href="synopsis.html">Synopsis</a>
+          <a href="about.html">Movie Characters</a>
+          <a href="more-info.html">More Info</a>
+          <a href="contact-us.html">Contact Us</a>
+          <a href="author.html">Author</a>
       </div>
     </div>
   </header>
@@ -81,7 +81,7 @@ header .navigation .navigation-items a:hover:before{
         </div>
         <div class="slide slide-1">
              <div class="caption">
-                 <h3>Avengers: End Game</h3>
+                 <h3>Synopsis</h3>
                  <p> <ul style="font-size:20px">
                     <li style="color:#ccc; text-align: center" ><span style="color:#ccc; font-size:18px">Directors: Anthony Russo, Joe Russo</span></li>
                     <li style="color:#ccc; text-align: center" ><span style="color:#ccc; font-size:18px">Producer: Kevin Feige</span></li>
@@ -95,21 +95,18 @@ header .navigation .navigation-items a:hover:before{
         <div class="slide slide-2">
             <div class="caption">
                 <h3>Synopsis</h3>
-                <p>Avengers: Endgame was said to be the continuos episode of the movie <a href="https://www.marvel.com/movies/avengers-infinity-war">Avengers: Infinity War.</a> The timeline of Avengers: End Game was 5th year after the Avengers: Infinity War. 
-                   Previously, in Avengers: Infinity War, over half of the characters were destroyed by the <a href="https://www.marvel.com/articles/comics/today-in-marvel-history-the-thanos-snap">"Thanos' snap".</a> Therefore, the storyline of Avengers: End Game started with <a href="https://www.marvel.com/teams-and-groups/avengers">Avengers</a> killed Thanos after finding out the location of Thanos.
-                   They also found out that the <a href="https://www.marvel.com/items/infinity-gems">Infinity Stones,</a> were destroyed by Thanos. As the Infinity Stone plays an important role in this movie for bringing the others back alive, they had to travel to the past and bring the stones back. 
+                <p>Avengers: Endgame was said to be the continuos episode of the movie <a href="https://www.marvel.com/movies/avengers-infinity-war">Avengers: Infinity War.</a> 
+                   Previously, in Avengers: Infinity War, over half of the characters were destroyed by the <a href="https://www.marvel.com/articles/comics/today-in-marvel-history-the-thanos-snap">"Thanos' snap".</a> Therefore, the storyline started with <a href="https://www.marvel.com/teams-and-groups/avengers">Avengers</a> killing Thanos.
+                   Later, they found out that the <a href="https://www.marvel.com/items/infinity-gems">Infinity Stones,</a> were destroyed by Thanos and they had to travel to the past to bring the stones back. 
                    The storyline continues by Antman who provides the concept of the quantum mechanics while Iron Man creates a time machine. 
-                   With the creation of time machine, the Avengers Split up to travel back to several destinations and collect the different Infinity Stones. Captain America, Iron Man, Hulk and Ant-Man travel to New York in 2012 to get the Mind Stone and the Space Stone. Thor and Rocket travel to Asgard in 2013 to get the Reality Stone. Nebula and James Rhodes travel to Morag in 2014 to get the Power Stone. And Black Widow and Hawkeye travel to Vormir to get the Soul Stone.
-                   These are the key moments throughout the <a href="https://www.marvel.com/articles/movies/the-essential-marvel-cinematic-universe-guide-phase-one"> Marvel Cinematic Universe.</a></p>
+                   With the creation of time machine, the Avengers Split up to travel back to the key moments throughout the <a href="https://www.marvel.com/articles/movies/the-essential-marvel-cinematic-universe-guide-phase-one"> MCU</a> and collect the different Infinity Stones.</p>
             </div>
        </div>
        <div class="slide slide-3">
             <div class="caption">
                 <h3>Synopsis</h3>
-                <p>It was said that whatever the Avengers did through the time machine will not affect the future. The Avengers collected the Infinity Stones back to the present. After getting back to the present, the Avengers created The Infinity Gauntlet. Hulk then wear the gloves and brought the others back to live with a snap but this snap had also destroyed his hand due to the radiation of the gauntlet. 
-                   When returning back to the present, Thanos followed the Avengers back and had issued an attack to get the Infinity stone back to perform another Thanos Snap. This had started a war and Doctor Strange brought all of the Avengers to the Avengers HQ. In the end, Iron Man snatched the Infinity Stone and placed it in his glove. He snap his fingers and destroy Thanos but at the same time, Iron Man cannot afford the power of the stone and was dead. 
-                    In the end, Thor joins the Guardians of the Galaxy, leaving Valkyrie in charge of New Asgard. Meanwhile, Steve Rogers travels back in time to return the Infinity Stones to their original places in time, and opts to remain in the past and live happily ever after with Peggy Carter.
-                    An elderly Rogers then shows up in the present and hands his shield to Sam Wilson, making him the new Captain America.</p>
+                <p>The Avengers collected the Infinity Stones back to the present. Then, the Avengers created The Infinity Gauntlet. Hulk brought the others back to live with a snap and destroyed his hand. 
+                   Thanos followed the Avengers back and had issued an attack to get the Infinity stone back. The war then started between Thanos and Avengers. In the end, Iron Man snatched the Infinity Stone and snapped his fingers to destroy Thanos but in the end, Iron Man was dead too. </p>
             </div>
        </div>
        <div class="arrow r" onclick="next()">
@@ -117,7 +114,16 @@ header .navigation .navigation-items a:hover:before{
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
+        //Javacript for responsive navigation menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+    
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
+
         let slide = document.querySelectorAll('.slide');
         var current = 0;
 
@@ -257,6 +263,78 @@ a {
 }
 .r {
     right: 0;
+}
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section{
+    padding: 100px 20px;
+  }
+
+  .home .media-icons{
+    right: 15px;
+  }
+
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a{
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items a:before{
+    background: #222;
+    height: 5px;
+  }
+
+  header .navigation.active .navigation-items{
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn{
+    background: url(img/menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active{
+    z-index: 999;
+    background: url(close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
 }
     </style>
 </body>
